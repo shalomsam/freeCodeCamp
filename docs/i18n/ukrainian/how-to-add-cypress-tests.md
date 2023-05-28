@@ -1,6 +1,6 @@
 # Як додати тести Cypress
 
-При внесенні змін до JavaScript, CSS або HTML, які можуть змінити функціональність або макет сторінки, важливо додати відповідні інтеграційні тести  [Cypress](https://docs.cypress.io).
+При внесенні змін до JavaScript, CSS або HTML, які можуть змінити функціональність або макет сторінки, важливо додати відповідні інтеграційні тести [Cypress](https://docs.cypress.io).
 
 Щоб дізнатися, як писати тести Cypress, або «специфікації», будь ласка, зверніться до офіційної [документації Cypress](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html).
 
@@ -12,13 +12,13 @@
 
 ## Як проводити тести
 
-> [!NOTE] Якщо ви використовуєте GitPod, див. [налаштування Cypress-GitPod](how-to-add-cypress-tests.md#cypress-gitpod-setup)
+> [!NOTE] Якщо ви використовуєте Gitpod, див. [налаштування Cypress-Gitpod](how-to-add-cypress-tests.md#cypress-gitpod-setup)
 
 ### 1. Переконайтеся, що MongoDB і клієнтські програми запущені
 
 - [Запустіть MongoDB і заповнiть базу даних](how-to-setup-freecodecamp-locally.md#step-3-start-mongodb-and-seed-the-database)
 
-- [Запустіть клієнтський додаток freeCodeCamp і сервер API](how-to-setup-freecodecamp-locally.md#step-4-start-the-freecodecamp-client-application-and-api-server)
+- [Запустіть клієнтський застосунок freeCodeCamp і сервер API](how-to-setup-freecodecamp-locally.md#step-4-start-the-freecodecamp-client-application-and-api-server)
 
 ### 2. Запустіть тести Cypress
 
@@ -48,11 +48,11 @@
   pnpm run e2e:dev:run
   ```
 
-## Налаштування Cypress-GitPod
+## Налаштування Cypress-Gitpod
 
 ### 1. Переконайтеся, що середовище розробки запущене
 
-Якщо запуск середовища GitPod не розробив середовище автоматично:
+Якщо запуск середовища Gitpod не розробив середовище автоматично:
 
 - Дотримуйтесь [посібнику з налаштування MongoDB](https://www.mongodb.com/basics/get-started).
 - Створіть конфігураційний файл.

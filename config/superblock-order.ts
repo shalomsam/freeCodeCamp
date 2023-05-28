@@ -81,7 +81,8 @@ export const defaultSuperBlockOrder: SuperBlocks[] = [
   SuperBlocks.CollegeAlgebraPy,
   SuperBlocks.CodingInterviewPrep,
   SuperBlocks.ProjectEuler,
-  SuperBlocks.TheOdinProject
+  SuperBlocks.TheOdinProject,
+  SuperBlocks.ExampleCertification
 ];
 
 /*
@@ -132,7 +133,8 @@ export const superBlockOrder: SuperBlockOrder = {
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [
           SuperBlocks.JsAlgoDataStructNew,
-          SuperBlocks.TheOdinProject
+          SuperBlocks.TheOdinProject,
+          SuperBlocks.ExampleCertification
         ],
         [SuperBlockStates.Legacy]: [SuperBlocks.RespWebDesign]
       },
@@ -187,7 +189,8 @@ export const superBlockOrder: SuperBlockOrder = {
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [
           SuperBlocks.JsAlgoDataStructNew,
-          SuperBlocks.TheOdinProject
+          SuperBlocks.TheOdinProject,
+          SuperBlocks.ExampleCertification
         ],
         [SuperBlockStates.Legacy]: []
       }
@@ -236,13 +239,14 @@ export const superBlockOrder: SuperBlockOrder = {
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [
           SuperBlocks.JsAlgoDataStructNew,
-          SuperBlocks.TheOdinProject
+          SuperBlocks.TheOdinProject,
+          SuperBlocks.ExampleCertification
         ],
         [SuperBlockStates.Legacy]: []
       }
     }
   },
-  [Languages.ChineseTrandational]: {
+  [Languages.ChineseTraditional]: {
     [CurriculumMaps.Landing]: [
       SuperBlocks.RespWebDesignNew,
       SuperBlocks.JsAlgoDataStruct,
@@ -285,7 +289,8 @@ export const superBlockOrder: SuperBlockOrder = {
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [
           SuperBlocks.JsAlgoDataStructNew,
-          SuperBlocks.TheOdinProject
+          SuperBlocks.TheOdinProject,
+          SuperBlocks.ExampleCertification
         ],
         [SuperBlockStates.Legacy]: []
       }
@@ -320,21 +325,21 @@ export const superBlockOrder: SuperBlockOrder = {
           SuperBlocks.DataAnalysisPy,
           SuperBlocks.InfoSec,
           SuperBlocks.MachineLearningPy,
-          SuperBlocks.CodingInterviewPrep
+          SuperBlocks.CollegeAlgebraPy,
+          SuperBlocks.CodingInterviewPrep,
+          SuperBlocks.ProjectEuler
         ],
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [],
         [SuperBlockStates.Legacy]: [SuperBlocks.RespWebDesign]
       },
       [TranslationStates.NotAudited]: {
-        [SuperBlockStates.Current]: [
-          SuperBlocks.CollegeAlgebraPy,
-          SuperBlocks.ProjectEuler
-        ],
+        [SuperBlockStates.Current]: [],
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [
           SuperBlocks.JsAlgoDataStructNew,
-          SuperBlocks.TheOdinProject
+          SuperBlocks.TheOdinProject,
+          SuperBlocks.ExampleCertification
         ],
         [SuperBlockStates.Legacy]: []
       }
@@ -369,19 +374,21 @@ export const superBlockOrder: SuperBlockOrder = {
           SuperBlocks.DataAnalysisPy,
           SuperBlocks.InfoSec,
           SuperBlocks.MachineLearningPy,
-          SuperBlocks.CodingInterviewPrep
+          SuperBlocks.CollegeAlgebraPy,
+          SuperBlocks.CodingInterviewPrep,
+          SuperBlocks.ProjectEuler
         ],
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [SuperBlocks.TheOdinProject],
         [SuperBlockStates.Legacy]: [SuperBlocks.RespWebDesign]
       },
       [TranslationStates.NotAudited]: {
-        [SuperBlockStates.Current]: [
-          SuperBlocks.CollegeAlgebraPy,
-          SuperBlocks.ProjectEuler
-        ],
+        [SuperBlockStates.Current]: [],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [
+          SuperBlocks.JsAlgoDataStructNew,
+          SuperBlocks.ExampleCertification
+        ],
         [SuperBlockStates.Legacy]: []
       }
     }
@@ -427,7 +434,10 @@ export const superBlockOrder: SuperBlockOrder = {
           SuperBlocks.ProjectEuler
         ],
         [SuperBlockStates.New]: [],
-        [SuperBlockStates.Upcoming]: [SuperBlocks.JsAlgoDataStructNew],
+        [SuperBlockStates.Upcoming]: [
+          SuperBlocks.JsAlgoDataStructNew,
+          SuperBlocks.ExampleCertification
+        ],
         [SuperBlockStates.Legacy]: []
       }
     }
@@ -476,7 +486,8 @@ export const superBlockOrder: SuperBlockOrder = {
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [
           SuperBlocks.JsAlgoDataStructNew,
-          SuperBlocks.TheOdinProject
+          SuperBlocks.TheOdinProject,
+          SuperBlocks.ExampleCertification
         ],
         [SuperBlockStates.Legacy]: []
       }
@@ -526,7 +537,8 @@ export const superBlockOrder: SuperBlockOrder = {
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [
           SuperBlocks.JsAlgoDataStructNew,
-          SuperBlocks.TheOdinProject
+          SuperBlocks.TheOdinProject,
+          SuperBlocks.ExampleCertification
         ],
         [SuperBlockStates.Legacy]: []
       }
@@ -575,7 +587,8 @@ export const superBlockOrder: SuperBlockOrder = {
         [SuperBlockStates.New]: [],
         [SuperBlockStates.Upcoming]: [
           SuperBlocks.JsAlgoDataStructNew,
-          SuperBlocks.TheOdinProject
+          SuperBlocks.TheOdinProject,
+          SuperBlocks.ExampleCertification
         ],
         [SuperBlockStates.Legacy]: [SuperBlocks.RespWebDesign]
       }

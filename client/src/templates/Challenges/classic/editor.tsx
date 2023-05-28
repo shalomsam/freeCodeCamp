@@ -11,7 +11,7 @@ import { OS } from 'monaco-editor/esm/vs/base/common/platform.js';
 import Prism from 'prismjs';
 import React, { useEffect, Suspense, MutableRefObject, useRef } from 'react';
 import ReactDOM from 'react-dom';
-import { connect } from 'react-redux';
+import { Provider, connect, useStore } from 'react-redux';
 import { createSelector } from 'reselect';
 import store from 'store';
 
@@ -47,7 +47,8 @@ import {
   initTests,
   stopResetting,
   openModal,
-  resetAttempts
+  resetAttempts,
+  sendRenderTime
 } from '../redux/actions';
 import {
   attemptsSelector,
@@ -91,6 +92,7 @@ export interface EditorProps {
   output: string[];
   resizeProps: ResizeProps;
   saveChallenge: () => void;
+  sendRenderTime: (renderTime: number) => void;
   saveEditorContent: () => void;
   setEditorFocusability: (isFocusable: boolean) => void;
   submitChallenge: () => void;
@@ -176,6 +178,7 @@ const mapDispatchToProps = {
   initTests,
   stopResetting,
   resetAttempts,
+  sendRenderTime,
   openHelpModal: () => openModal('help'),
   openResetModal: () => openModal('reset')
 };
@@ -234,6 +237,7 @@ const initialData: EditorProperties = {
 };
 
 const Editor = (props: EditorProps): JSX.Element => {
+  const reduxStore = useStore();
   const { t } = useTranslation();
   const { editorRef, initTests, resetAttempts } = props;
   // These refs are used during initialisation of the editor as well as by
@@ -663,18 +667,20 @@ const Editor = (props: EditorProps): JSX.Element => {
     const isChallengeComplete = challengeIsComplete();
 
     ReactDOM.render(
-      <LowerJaw
-        openHelpModal={props.openHelpModal}
-        openResetModal={props.openResetModal}
-        tryToExecuteChallenge={tryToExecuteChallenge}
-        hint={output[1]}
-        testsLength={props.tests.length}
-        attempts={attemptsRef.current}
-        challengeIsCompleted={isChallengeComplete}
-        tryToSubmitChallenge={tryToSubmitChallenge}
-        isSignedIn={props.isSignedIn}
-        updateContainer={() => updateOutputViewZone(outputNode, editor)}
-      />,
+      <Provider store={reduxStore}>
+        <LowerJaw
+          openHelpModal={props.openHelpModal}
+          openResetModal={props.openResetModal}
+          tryToExecuteChallenge={tryToExecuteChallenge}
+          hint={output[1]}
+          testsLength={props.tests.length}
+          attempts={attemptsRef.current}
+          challengeIsCompleted={isChallengeComplete}
+          tryToSubmitChallenge={tryToSubmitChallenge}
+          isSignedIn={props.isSignedIn}
+          updateContainer={() => updateOutputViewZone(outputNode, editor)}
+        />
+      </Provider>,
       outputNode
     );
   }
@@ -1151,6 +1157,11 @@ const Editor = (props: EditorProps): JSX.Element => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.challengeFiles, props.isResetting]);
+
+  useEffect(() => {
+    props.sendRenderTime(Date.now());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.description]);
 
   useEffect(() => {
     const { showProjectPreview, previewOpen } = props;

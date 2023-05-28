@@ -29,6 +29,7 @@
     "sign-up-email-list": "Quincy のウィークリーメールを受け取る",
     "sign-out": "サインアウト",
     "curriculum": "カリキュラム",
+    "contribute": "Contribute",
     "forum": "フォーラム",
     "radio": "ラジオ",
     "profile": "プロフィール",
@@ -42,7 +43,7 @@
     "menu": "メニュー",
     "settings": "設定",
     "take-me": "チャレンジに移動",
-    "check-answer": "解答を確認",
+    "check-answer": "解答をチェック",
     "get-hint": "ヒントを見る",
     "ask-for-help": "質問する",
     "create-post": "フォーラムにヘルプ投稿を作成",
@@ -72,10 +73,14 @@
     "go-to-settings": "設定へ移動して認定証を取得",
     "click-start-course": "コースを開始",
     "click-start-project": "プロジェクトを開始",
+    "click-start-exam": "Start the exam",
     "change-language": "言語変更",
-    "cancel-change": "変更キャンセル",
     "resume-project": "プロジェクト再開",
-    "start-project": "プロジェクト開始"
+    "start-project": "プロジェクト開始",
+    "previous-question": "Previous question",
+    "next-question": "Next question",
+    "finish-exam": "Finish the exam",
+    "submit-exam-results": "Submit my results"
   },
   "landing": {
     "big-heading-1": "プログラミングを無料で学ぶ。",
@@ -102,7 +107,65 @@
         "testimony": "「私はいつも JavaScript を学ぶことに躓いていました。たくさんのコースを受講しましたが、freeCodeCamp に一番のめり込みました。JavaScript だけでなくデータ構造とアルゴリズムも学べることで、ソフトウェアエンジニアとして Spotify という夢の仕事を得るために必要な自信と<strong>スキルを freeCodeCamp は私に与えてくれました</strong>」"
       }
     },
-    "certification-heading": "以下の検証済み認定証を無料で取得できます。"
+    "certification-heading": "以下の検証済み認定証を無料で取得できます。",
+    "faq": "よくある質問:",
+    "faqs": [
+      {
+        "question": "freeCodeCamp とは何ですか？",
+        "answer": [
+          "freeCodeCamp は、世界中の人々が集まって一緒にプログラミングを学んでいるコミュニティです。私たちは 501(c)(3) パブリック・チャリティです。"
+        ]
+      },
+      {
+        "question": "freeCodeCamp ではどのようにしてプログラミングを学べますか？",
+        "answer": [
+          "ブラウザ、コードエディター、モバイルアプリなどからすぐに使える環境で、段階的に、たくさんのプロジェクトを作成しながら学習します。",
+          "また、無料で検証済み認定証を取得できます。"
+        ]
+      },
+      {
+        "question": "freeCodeCamp は本当に無料ですか？",
+        "answer": [
+          "はい。freeCodeCamp のあらゆるコンテンツは 100% 無料です。全講座、プロジェクト、さらには認定証も無料です。"
+        ]
+      },
+      {
+        "question": "freeCodeCamp はソフトウェア開発の仕事に就くのに役立ちますか？",
+        "answer": [
+          "はい。毎年数千人の freeCodeCamp コミュニティ参加者が、初めてのソフトウェア開発の仕事を得ています。"
+        ]
+      },
+      {
+        "question": "どのようなスキルが学べますか？",
+        "answer": [
+          "HTML、CSS、JavaScript、Python、Linux、Git、SQL など、多くの開発者が仕事で必要とするスキルが学べます。また、ウェブ開発、モバイルアプリ開発、データサイエンス、人工知能などに関する便利なライブラリの使い方も学べます。"
+        ]
+      },
+      {
+        "question": "どれくらいの時間で学べますか？",
+        "answer": [
+          "freeCodeCamp は自分のペースで進められます。現実的には、ソフトウェアエンジニアとして仕事を得るのに十分なレベルに到達するには数年かかるでしょう。準備が不十分な状態で、生計を立てるための仕事や学校を辞めることはおすすめしません。"
+        ]
+      },
+      {
+        "question": "どこから始めたらいいですか？",
+        "answer": [
+          "まったくの初心者の場合は、freeCodeCamp コアカリキュラムの最初から始めるのが良いでしょう。いくらか経験がある場合でも最初から始めることをおすすめしますが、学びたい分野まで飛ばしても構いません。"
+        ]
+      },
+      {
+        "question": "無料の検証済み認定証はどうすれば取得できますか？",
+        "answer": [
+          "認定証を取得するには、それぞれ 5 つある認定プロジェクトを完成させ、すべてのテストを成功させる必要があります。"
+        ]
+      },
+      {
+        "question": "学びたい分野が freeCodeCamp のコアカリキュラムにありません。",
+        "answer": [
+          "freeCodeCamp ではコアカリキュラムの他にも、何千件もの (本のようなボリュームの) 記事、講座、チュートリアルを無料で公開しています。あなたが学習したい分野もきっと見つかると思います。検索バーから探してみてください。"
+        ]
+      }
+    ]
   },
   "settings": {
     "share-projects": "あなたの freeCodeCamp 以外のプロジェクトや記事、承認されたプルリクエストをシェアしましょう。",
@@ -221,8 +284,7 @@
     "tweet": "{{certTitle}} の認定証を @freeCodeCamp で取得しました！確認はこちら: {{certURL}}",
     "avatar": "{{username}} のアバター",
     "joined": "{{date}} に加入",
-    "total-points": "合計 {{count}} ポイント",
-    "total-points_plural": "合計 {{count}} ポイント",
+    "total-points": "ポイント数: {{count}}",
     "points": "{{count}} ポイント ({{date}})",
     "points_plural": "{{count}} ポイント ({{date}})",
     "page-number": "{{pageNumber}} / {{totalPages}}"
@@ -275,8 +337,8 @@
     "add-subtitles": "字幕の改善や追加を支援する",
     "wrong-answer": "残念、正しい答えではありません。もう一度挑戦してみましょう。",
     "check-answer": "以下のボタンをクリックして解答を確認してください。",
-    "assignment-not-complete": "課題を完了してください",
-    "assignments": "課題",
+    "assignment-not-complete": "宿題を完了してください",
+    "assignments": "宿題",
     "question": "問題",
     "solution-link": "回答のリンク",
     "github-link": "GitHub のリンク",
@@ -368,6 +430,16 @@
     "duration": "当団体に一回のご支援をいただけますと幸いです。",
     "duration-2": "当団体に毎月のご支援をいただけますと幸いです。",
     "duration-4": "当団体にご支援をいただけますと幸いです。",
+    "progress-modal-cta-1": "寄付を通して、無料のコンピューターサイエンス認定学位の開発をご支援ください。",
+    "progress-modal-cta-2": "寄付を通して、私たちのウェブサイトのサーバー稼働時間 53 時間分をご支援ください。",
+    "progress-modal-cta-3": "寄付を通して、世界中の学習者に向けた 32 言語の翻訳活動をご支援ください。",
+    "progress-modal-cta-4": "寄付を通して、新しい Python カリキュラムの開発をご支援ください。",
+    "progress-modal-cta-5": "寄付を通して、新たなプログラミングツールに関する講座の作成をご支援ください。",
+    "progress-modal-cta-6": "寄付を通して当団体のオープンソースプロジェクトをご支援ください。",
+    "progress-modal-cta-7": "寄付を通して、当団体がさらに多くの優れた講師を雇用できるようご支援ください。",
+    "progress-modal-cta-8": "寄付を通して、新しいツールやコンセプトに対応する新講座の開発をご支援ください。",
+    "progress-modal-cta-9": "寄付を通して、開発者のための数学講座の作成をご支援ください。",
+    "progress-modal-cta-10": "寄付を通して、無料で誰もが利用できる、専門的なプログラミング認定証の開発をご支援ください。",
     "nicely-done": "おめでとうございます。「{{block}}」を完了しました。",
     "credit-card": "クレジットカード",
     "credit-card-2": "またはクレジットカードで寄付する:",
@@ -528,7 +600,6 @@
     "not-authorized": "このルートへのアクセス権限がありません",
     "could-not-find": "お探しのページが見つかりませんでした。ご確認の上もう一度お試しください。",
     "wrong-updating": "アカウント情報の更新中に問題が発生しました。ご確認の上もう一度お試しください。",
-    "updated-preferences": "設定を更新しました",
     "updated-about-me": "個人情報を更新しました",
     "updated-socials": "他サービスのリンクを更新しました",
     "updated-sound": "サウンド設定を更新しました",
@@ -751,17 +822,17 @@
     "user-agent": "ユーザーエージェント: <code>{{userAgent}}</code>",
     "challenge": "**チャレンジ:**",
     "challenge-link": "**チャレンジへのリンク:**",
-    "whats-happening": "**何が起きているか説明してください:**",
-    "describe": "困っている内容をこちらに詳しく記入してください。",
+    "whats-happening": "**状況を説明しましょう:**",
+    "describe": "質問内容をここに詳しく記入してください。",
     "camper-project": "**プロジェクトのリンク**",
     "camper-code": "**現状のコード**",
-    "warning": "警告",
-    "too-long-one": "チャレンジの元コードとあなたの解答の両方、またはいずれかが、チャレンジから移植できる最大長を超えています。",
-    "too-long-two": "記述したコードを読み易いフォーマットで表示するには、ここで追加の手順が必要です。",
-    "too-long-three": "このリンクを開いた元のチャレンジの、エディター内に表示されているすべてのコードをコピーし、貼り付けてください。",
-    "add-code-one": "この 2 つの文を、コピーしたコードと置き換えてください。",
-    "add-code-two": "上の ``` と下の ``` の行を残しておくことで、",
-    "add-code-three": "投稿内でコードが適切にフォーマットされますので、そのようにしてください。"
+    "warning": "注意",
+    "too-long-one": "チャレンジの元コードとあなたの解答の両方、またはいずれかが、自動でコピーできる最大長を超えています。",
+    "too-long-two": "記述したコードを読みやすいフォーマットで表示するために、追加の手順が必要です。",
+    "too-long-three": "リンク元のチャレンジの、エディター内に表示されているすべてのコードをコピーして、貼り付けてください。",
+    "add-code-one": "この 2 つの文を、コピーしたコードに置き換えてください。",
+    "add-code-two": "投稿内でコードが適切にフォーマットされるようにするため、",
+    "add-code-three": "上の ``` と下の ``` の行は残しておいてください。"
   },
   "user-token": {
     "title": "ユーザートークン",
